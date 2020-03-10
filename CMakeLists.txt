@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.10)
+project(test_exif)
+set(libexif_path "/home/vega/libexif")
+set(CMAKE_CXX_STANDARD 11)
+include_directories(${libexif_path}/)
+add_executable(test_exif main.cpp)
+TARGET_LINK_LIBRARIES(test_exif exif opencv_core opencv_highgui  opencv_imgproc opencv_imgcodecs)
